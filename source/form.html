@@ -21,13 +21,13 @@
         </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
-            <li class="site-list__item">
+            <li class="main-nav__item">
               <a href="index.html"> Главная </a>
             </li>
-            <li class="site-list__item">
+            <li class="main-nav__item">
               <a href="catalog.html"> Каталог продукции </a>
             </li>
-            <li class="site-list__item site-list__item--active">
+            <li class="main-nav__item main-nav__item--active">
               <a> Подбор программы </a>
             </li>
           </ul>
@@ -41,52 +41,50 @@
           Заполните анкету, и мы подберем программу питания для вашего кота
         </p>
         <form
-          class="form-program"
+          class="form__program"
           action="https://echo.htmlacademy.ru"
           method="post"
           target="_blank"
         >
-          <div class="form__container--name">
-            <fieldset class="form-program__fieldset--name">
-              <p class="form-program__name">
+          <div class="form__container form__container--name">
+            <fieldset class="form__fieldset form__fieldset--name">
+              <p class="form__item form__item--name">
                 <label for="name">ИМЯ:*</label>
                 <input id="name" type="text" name="name" value="Барсик" />
               </p>
-              <p class="form__program__weight">
+              <p class="form__item form__item--weight">
                 <label for="weight">Вес (кг):*</label>
                 <input id="weight" type="text" name="weight" value="7" />
               </p>
-              <p class="form__program__age">
+              <p class="form__item form__item--age">
                 <label for="age">Возраст (лет):</label>
                 <input id="age" type="text" name="age" value="7" />
               </p>
             </fieldset>
           </div>
-          <div class="form__container--radio">
-            <fieldset class="form-program__fieldset--radio">
-              <ul class="form-program__list">
-                <li class="form-program__item">
+          <div class="form__container form__container--radio">
+            <fieldset class="form__fieldset form__fieldset--radio">
+              <ul class="form__list form-element">
+                <li class="form-element__item">
                   <input id="slim" type="radio" name="slim" />
                   <label for="slim">Похудение</label>
                 </li>
-                <li class="form-program__item">
+                <li class="form-element__item">
                   <input id="pro" type="radio" name="pro" />
                   <label for="pro">Набор массы</label>
                 </li>
-                <li class="form-program__item">
+                <li class="form-element__item">
                   <input id="advice" type="radio" name="advice" />
                   <label for="advice">Не знаю (Нужен ваш совет)</label>
                 </li>
               </ul>
             </fieldset>
           </div>
-          <div class="form__container--contacts">
-            <fieldset class="form-program__fieldset--contacts">
-              <h3 class="form-program__title">
-                Контактные данные (владельца кота)
-              </h3>
-              <div class="form-program__container--contacts">
-                <p class="form-program__email">
+          <div class="form__container form__container--contacts">
+            <fieldset class="form__fieldset form__fieldset--contacts">
+              <h3 class="form__heading">Контактные данные (владельца кота)</h3>
+              <div class="form__container form__container--contacts">
+                <p class="form__item form__item--email">
                   <label for="email">E-mail:*</label>
                   <input
                     id="email"
@@ -95,7 +93,7 @@
                     value="кuklachev@gmail.com"
                   />
                 </p>
-                <p class="form-program__tel">
+                <p class="form__item form__item--tel">
                   <label for="tel">Телефон:*</label>
                   <input
                     id="tel"
@@ -107,7 +105,7 @@
               </div>
             </fieldset>
           </div>
-          <div class="form-program__container--comment">
+          <div class="form__container form__container--comment">
             <label for="comment">Комментарий</label>
             <textarea
               id="comment"
@@ -115,30 +113,30 @@
               placeholder="Расскажите обо всех повадках кота"
             ></textarea>
           </div>
-          <div class="form__container--checkbox">
-            <fieldset class="form-program__fieldset--checkbox">
-              <ul class="form-program__add--list">
-                <li class="form-program__add--item">
+          <div class="form__container form__container--checkbox">
+            <fieldset class="form__fieldset form__fieldset--checkbox">
+              <ul class="form__add add-list">
+                <li class="add-list__item">
                   <input id="sugar" type="checkbox" name="sugar" />
                   <label for="sugar">Cахарозаменитель</label>
                 </li>
-                <li class="form-program__add--item">
+                <li class="add-list__item">
                   <input id="milk" type="checkbox" name="milk" />
                   <label for="milk">Молоко</label>
                 </li>
-                <li class="form-program__add--item">
+                <li class="add-list__item">
                   <input id="water" type="checkbox" name="water" />
                   <label for="water">Питьевая вода</label>
                 </li>
-                <li class="form-program__add--item">
+                <li class="add-list__item">
                   <input id="vita" type="checkbox" name="vita" />
                   <label for="vita">Витамины</label>
                 </li>
               </ul>
             </fieldset>
-            <div class="form__container--button">
-              <button class="form-program__button">Отправить заявку</button>
-              <p class="form-program__text">* — Обязательные поля</p>
+            <div class="form__container form__container--button">
+              <button class="form__button">Отправить заявку</button>
+              <p class="form__text">* — Обязательные поля</p>
             </div>
           </div>
         </form>
@@ -154,7 +152,7 @@
             alt="логотип"
           />
         </div>
-        <div class="page-footer__social">
+        <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
               <a href="#"

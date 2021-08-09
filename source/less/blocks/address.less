@@ -1,22 +1,33 @@
 .address__wrapper {
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  padding: 0;
-  background-color: @basic-color-lightgrey;
+  .conteiner();
+  width: 360px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+  }
 }
 
 .address__text {
-  font-family: "Oswald", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 20px;
+  .font (@fz:16px; @lh: 20px;);
   color: @font-color-lightblack;
   text-transform: uppercase;
+  margin-right: 20px;
 }
 
 .address__description {
-  font-family: "Oswald", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 20px;
+  .font (@fz:14px; @lh: 20px;);
   color: @font-color-grey;
+}
+
+.address__map {
+  background-image: url(/source/img/rectangle.png);
+  width: 320px;
+  height: 362px;
+  margin-left: 140px;
 }

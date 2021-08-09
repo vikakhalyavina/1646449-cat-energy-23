@@ -1,36 +1,62 @@
 .title__wrapper {
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  padding: 0;
+  .conteiner();
+  text-align: center;
   background-color: @basic-color-green;
-  background: url(/source/img/index-background-2.svg) no-repeat,
-    url(/source/img/index-background-1.jpg) no-repeat;
+  background: url(/source/img/index-background-2.svg) center no-repeat,
+    url(/source/img/index-background-1.jpg) center no-repeat;
+  position: relative;
+  height: 310px;
+  @media (min-width: @tablet-width) {
+    height: 500px;
+    background-color: @font-color-white;
+    background: none;
+  }
+  @media (min-width: @desktop-width) {
+    height: 700px;
+    background-color: @font-color-white;
+    background: url(/source/img/bg-index-desktop-2.svg) right no-repeat,
+      url(/source/img/bg-index-desktop.jpg) right no-repeat;
+  }
 }
 
 .title__intro {
-  font-family: "Oswald", "Arial", sans-serif;
-  font-size: 36px;
-  line-height: 36px;
+  .font (@fz:36px; @lh:36px;);
   color: @font-color-white;
-  text-transform: uppercase;
+  padding-top: 27px;
+  @media (min-width: @tablet-width) {
+    .font (@fz:60px; @lh:60px;);
+    color: @font-color-black;
+    text-align: left;
+  }
 }
 
 .title__slogan {
-  font-family: "Oswald", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 14px;
+  .font (@fz:14px; @lh:14px;);
   color: @font-color-white;
   text-transform: uppercase;
+  padding-bottom: 300px;
+  @media (min-width: @tablet-width) {
+    .font (@fz:20px; @lh:20px;);
+    color: @font-color-black;
+    text-align: left;
+  }
 }
 
 .title__button {
-  font-family: "Oswald", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 18px;
+  .font (@fz:14px; @lh:18px;);
   color: @font-color-white;
   text-decoration: none;
   text-transform: uppercase;
   background-color: @basic-color-green;
   padding: 7px 44px;
+  @media (min-width: @tablet-width) {
+    text-align: left;
+  }
+}
+.title_img {
+  width: 280px;
+  height: 270px;
+  position: absolute;
+  top: 170px;
+  left: 180px;
 }

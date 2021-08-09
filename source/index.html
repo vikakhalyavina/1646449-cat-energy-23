@@ -2,22 +2,30 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="page__body">
     <header class="page-header">
-      <a class="page-header__logo">
-        <img
-          src="img/logo-mobile.svg"
-          width="33"
-          height="38"
-          alt="cat energy"
-        />
-      </a>
-      <a
-        ><img src="img/footer-logo.svg" width="128" height="24" alt="логотип"
-      /></a>
+      <div class="page-header__container">
+        <a class="page-header__logo">
+          <img
+            src="img/logo-mobile.svg"
+            width="33"
+            height="38"
+            alt="cat energy"
+          />
+        </a>
+        <a
+          ><img
+            class="page-header__img"
+            src="img/footer-logo.svg"
+            width="101"
+            height="18"
+            alt="логотип"
+        /></a>
+      </div>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
@@ -31,7 +39,7 @@
               <a href="catalog.html"> Каталог продукции </a>
             </li>
             <li class="main-nav__item">
-              <a href="#"> Подбор программы </a>
+              <a href="form.html"> Подбор программы </a>
             </li>
           </ul>
         </div>
@@ -42,7 +50,10 @@
       <section class="title">
         <div class="title__wrapper">
           <h2 class="visually-hidden">Заголовок Cat Energy</h2>
-          <p class="title__intro">Функциональное питание для котов</p>
+          <p class="title__intro">
+            Функциональное <br />
+            питание для котов
+          </p>
           <p class="title__slogan">Занялся собой? Займись котом!</p>
           <img
             class="title_img"
@@ -65,15 +76,17 @@
                 по деревьям? Пора на диету! Cat Energy Slim поможет вашему
                 питомцу сбросить лишний вес.
               </p>
-              <a class="catalog__link" href="#">Каталог slim</a>
+              <p><a class="catalog__link" href="#">Каталог slim</a></p>
+              <p></p>
             </li>
+
             <li class="catalog__item">
               <h3 class="catalog__title">Набор массы</h3>
               <p class="catalog__description">
                 Заработать авторитет среди дворовых котов и даже собак? Серия
                 Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!
               </p>
-              <a class="catalog__link" href="#">Каталог pro</a>
+              <p><a class="catalog__link" href="#">Каталог pro</a></p>
             </li>
           </ul>
         </div>
@@ -83,25 +96,25 @@
           <h2 class="visually-hidden">Преимущества</h2>
           <h3 class="advantages__title">Как это работает</h3>
           <ul class="advantages__list">
-            <li class="advantages__item advantages__item--benefit">
+            <li class="advantages__item">
               <p class="advantages__description">
                 Функциональное питание содержит только полезные питательные
                 вещества.
               </p>
             </li>
-            <li class="advantages__item advantages__item--structure">
+            <li class="advantages__item">
               <p class="advantages__description">
                 Выпускается в виде порошка, который нужно лишь залить кипятком и
                 готово.
               </p>
             </li>
-            <li class="advantages__item advantages__item--eat">
+            <li class="advantages__item">
               <p class="advantages__description">
                 Замените один-два приема обычной еды на наше функциональное
                 питание.
               </p>
             </li>
-            <li class="advantages__item advantages__item--time">
+            <li class="advantages__item">
               <p class="advantages__description">
                 Уже через месяц наслаждайтесь изменениями к лучшему вашего
                 питомца!
@@ -122,18 +135,18 @@
           </p>
           <ul class="reviews__results">
             <li class="reviews__result">
-              <p class="reviews__item reviews__item--headline">5кг</p>
-              <p class="reviews__item reviews__item--text">снижение веса</p>
+              <p class="reviews__item">5кг</p>
+              <p class="reviews__item">снижение веса</p>
             </li>
             <li class="reviews__result">
-              <p class="reviews__item reviews__item--headline">60 дней</p>
-              <p class="reviews__item reviews__item--text">затрачено времени</p>
+              <p class="reviews__item">60 дней</p>
+              <p class="reviews__item">затрачено времени</p>
             </li>
           </ul>
           <p class="reviews__desc">Затраты на питание: 15 000 РУБ.</p>
           <img
             class="reviews__img"
-            src="img/cat.jpg"
+            src="img/cat.png"
             width="311"
             height="232"
             alt="изображение кота"
@@ -154,16 +167,23 @@
             ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
           </p>
         </div>
-        <img src="img/rectangle.png" width="320" height="362" alt="карта" />
+        <img
+          class="address__map"
+          src="img/rectangle.png"
+          width="320"
+          height="362"
+          alt="карта"
+        />
       </section>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
           <img
+            class="page-footer__img"
             src="img/footer-logo.svg"
-            width="128"
-            height="24"
+            width="101"
+            height="18"
             alt="логотип"
           />
         </div>

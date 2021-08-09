@@ -13,9 +13,11 @@
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
+
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
   }
+
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
@@ -29,38 +31,42 @@
   .font (@fz:14px; @lh:18px;);
   color: @font-color-grey;
   width: 200px;
+
   &:nth-child(1)::before {
     content: "";
     display: block;
     position: absolute;
-    background-image: url(/source/img/group-1.png);
+    background-image: url("/source/img/group-1.png");
     width: 60px;
     height: 60px;
     left: 140px;
   }
+
   &:nth-child(2)::before {
     content: "";
     display: block;
     position: absolute;
-    background-image: url(/source/img/group-2.png);
+    background-image: url("/source/img/group-2.png");
     width: 60px;
     height: 60px;
     left: 140px;
   }
+
   &:nth-child(3)::before {
     content: "";
     display: block;
     position: absolute;
-    background-image: url(/source/img/group-3.png);
+    background-image: url("/source/img/group-3.png");
     width: 60px;
     height: 60px;
     left: 140px;
   }
+
   &:nth-child(4)::before {
     content: "";
     display: block;
     position: absolute;
-    background-image: url(/source/img/group-4.png);
+    background-image: url("/source/img/group-4.png");
     width: 60px;
     height: 60px;
     left: 140px;

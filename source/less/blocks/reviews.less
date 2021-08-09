@@ -3,9 +3,11 @@
   background-color: @basic-color-darkgrey;
   padding: 20px 20px;
   width: 360px;
+
   @media (min-width: @tablet-width) {
     width: 768px;
   }
+
   @media (min-width: @desktop-width) {
     width: 1200px;
   }
@@ -38,6 +40,7 @@
     color: @font-color-black;
     text-transform: uppercase;
   }
+
   &:nth-child(2) {
     .font (@fz:12px; @lh:12px;);
     color: @font-color-grey;
@@ -80,6 +83,7 @@
   border: 1px solid @border;
   border-radius: 50px;
   background: @font-color-white;
+
   ::after {
     content: "";
     display: block;

@@ -10,6 +10,7 @@
   flex-direction: column;
   align-content: center;
   justify-content: center;
+
   @media (min-width: @desktop-width) {
     flex-direction: row;
   }
@@ -17,33 +18,36 @@
 
 .catalog__item {
   background-color: @basic-color-lightgrey;
-  margin: 0;
-  padding: 0;
   margin-bottom: 20px;
   padding: 40px 20px 20px;
   width: 340px;
+
   @media (min-width: @tablet-width) {
     width: 710px;
   }
+
   @media (min-width: @desktop-width) {
     width: 570px;
+
     &:nth-child(1) {
       margin-right: 20px;
     }
   }
+
   &:nth-child(1)::before {
     content: "";
     display: block;
     position: absolute;
-    background-image: url(/source/img/cat_back.png);
+    background-image: url("/source/img/cat_back.png");
     width: 50px;
     height: 53px;
   }
+
   &:nth-child(2)::before {
     content: "";
     display: block;
     position: absolute;
-    background-image: url(/source/img/cat_back-2.png);
+    background-image: url("/source/img/cat_back-2.png");
     width: 67px;
     height: 50px;
   }
@@ -70,21 +74,23 @@
   text-decoration: none;
   text-transform: uppercase;
   position: relative;
-  &::after {
+
+  ::after {
     content: "";
     display: block;
     position: absolute;
-    background-image: url(/source/img/icon.svg);
+    background-image: url("/source/img/icon.svg");
     width: 24px;
     height: 12px;
     top: 5px;
     left: 100px;
   }
-  &::before {
+
+  ::before {
     content: "";
     display: block;
     position: absolute;
-    background-image: url(/source/img/Line-catalog.svg);
+    background-image: url("/source/img/Line-catalog.svg");
     width: 240px;
     height: 1px;
     top: -20px;

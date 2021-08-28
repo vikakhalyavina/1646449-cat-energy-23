@@ -1,21 +1,90 @@
+.form {
+  margin: 0 auto;
+  width: 360px;
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+  }
+}
+
 .form__title {
   .font (@fz:36px; @lh:36px;);
+  font-weight: 400;
   color: @font-color-black;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid @border;
+  margin: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    border: none;
+  }
 }
 
 .form__subtitle {
   .font (@fz:14px; @lh:18px;);
   color: @font-color-black;
   text-transform: uppercase;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 250px;
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .form__fieldset {
   border: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+
+  &--radio {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid @border;
+    border-bottom: 1px solid @border;
+    @media (min-width: @tablet-width) {
+      border: 1px solid @border;
+    }
+    @media (min-width: @desktop-width) {
+      width: 500px;
+    }
+  }
+}
+
+.form__textarea {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  width: 100%;
+  padding: 10px 10px;
+  border: 1px solid #e7e7e7;
+  margin-top: 20px;
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .form__container {
   &--contacts {
     position: relative;
+    @media (min-width: @tablet-width) {
+      width: 100%;
+    }
+    @media (min-width: @desktop-width) {
+      display: flex;
+    }
   }
 }
 
@@ -23,6 +92,15 @@
   .font (@fz:16px; @lh:18px;);
   color: @font-color-grey;
   text-transform: uppercase;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: @desktop-width) {
+    width: 500px;
+  }
 
   &--email::after {
     content: "";
@@ -47,46 +125,65 @@
   }
 }
 
+.form__item--email {
+  @media (min-width: @desktop-width) {
+    margin-right: 20px;
+  }
+}
+
+.form__block {
+  display: flex;
+}
+
 .form__item input {
   .font (@fz:16px; @lh:18px;);
   color: @font-color-grey;
   text-transform: uppercase;
+  border: 1px solid #e7e7e7;
+  padding: 10px 10px;
+  width: 100%;
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
-
+.form__item label {
+  margin-right: 10px;
+}
 .form__list {
-  list-style: none;
-}
-
-.form-element__item {
-  .font (@fz:16px; @lh:18px;);
-  color: @font-color-morelightblack;
-  text-transform: uppercase;
+  .list();
 }
 
 .form__heading {
   .font (@fz:24px; @lh:26px;);
   color: @font-color-black;
+  font-weight: 400;
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .form__comment {
   .font (@fz:24px; @lh:26px;);
   color: @font-color-black;
-}
-
-.comment-text__input {
-  .font (@fz:16px; @lh:18px;);
-  color: @font-color-morelightblack;
-  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 20px;
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .form__add {
-  list-style: none;
-}
-
-.add-list__item {
-  .font (@fz:16px; @lh:18px;);
-  color: @font-color-black;
-  text-transform: uppercase;
+  .list();
+  display: grid;
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 .form__button {
@@ -97,9 +194,38 @@
   border: none;
   background-color: @basic-color-green;
   padding: 7px 44px;
+  width: 100%;
+  margin-left: 20px;
+  margin-right: 20px;
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+    width: 300px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 500px;
+  }
 }
 
 .form__text {
-  .font (@fz:14px; @lh:16px;);
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
   color: @font-color-black;
+  text-align: center;
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+.form__container--comment {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.form__container--button {
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
 }

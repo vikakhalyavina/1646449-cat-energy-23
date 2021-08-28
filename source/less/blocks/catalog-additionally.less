@@ -1,25 +1,60 @@
 .catalog-additionally__wrapper {
-  .conteiner();
+  .container();
+  padding-left: 20px;
+  padding-right: 20px;
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
 }
 
 .catalog-additionally__title {
   .font (@fz:24px; @lh:24px;);
+  font-weight: 400;
   color: @font-color-black;
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #cdcdcd;
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
+
+  ::after {
+    position: absolute;
+    content: "";
+    display: block;
+    background-image: url("/source/img/title-line.svg");
+    width: 53px;
+    height: 1px;
+  }
 }
 
 .catalog-additionally__list {
-  list-style: none;
+  .list();
 }
 
-.add-products__subtitle {
-  .font (@fz:16px; @lh:16px;);
-  color: @font-color-morelightblack;
-  text-transform: uppercase;
-}
+.catalog-additionally__item {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #cdcdcd;
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 768px;
+    justify-content: space-between;
+    align-items: baseline;
+  }
 
-.add-products__text {
-  .font (@fz:14px; @lh:14px;);
-  color: @font-color-grey;
+  @media (min-width: @desktop-width) {
+    flex-wrap: nowrap;
+    width: 900px;
+    padding: 0;
+    padding: 20px 0;
+    &:nth-child(1) {
+      border-top: 1px solid #cdcdcd;
+    }
+  }
 }
 
 .catalog-additionally__button {
@@ -29,17 +64,43 @@
   text-transform: uppercase;
   background-color: @basic-color-green;
   padding: 10px 109px;
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100px;
+  }
 }
 
 .catalog-additionally__present {
-  .font (@fz:16px; @lh:20px;);
+  width: 100%;
+
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
   color: @font-color-white;
   background-color: @basic-color-green;
   background-image: url("/source/img/gift-photo-catalog.png") no-repeat;
+  padding-top: 250px;
+  padding-bottom: 30px;
+
+  @media (min-width: @desktop-width) {
+    width: 240px;
+    margin-left: 40px;
+    padding: 0;
+  }
 }
 
 .catalog-additionally__desc {
   position: relative;
+  text-align: center;
+  width: 17%;
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+  }
 }
 
 .catalog-additionally__desc::before {

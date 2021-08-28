@@ -1,0 +1,24 @@
+.add-products__subtitle {
+  .font (@fz:16px; @lh:16px;);
+  font-weight: 400;
+  color: @font-color-morelightblack;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.add-products__text {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  color: @font-color-grey;
+  display: flex;
+  justify-content: space-between;
+  width: 280px;
+  margin-bottom: 20px;
+  @media (min-width: @tablet-width) {
+    margin-left: 100px;
+  }
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
+}

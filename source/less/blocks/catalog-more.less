@@ -1,0 +1,45 @@
+.catalog-more {
+  text-align: center;
+}
+
+.catalog-more__subtitle {
+  .font (@fz:16px; @lh:20px;);
+  font-weight: 400;
+  color: @font-color-lightblack;
+  text-transform: uppercase;
+  position: relative;
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  ::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: url("/source/img/plus.svg");
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.catalog-more__text {
+  font-family: "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 26px;
+  color: @font-color-grey;
+  margin-bottom: 20px;
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.catalog-more__button {
+  .font (@fz:16px; @lh:20px;);
+  color: @font-color-grey;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: @basic-color-lightgrey;
+  padding: 10px 94px;
+}

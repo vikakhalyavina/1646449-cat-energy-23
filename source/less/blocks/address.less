@@ -1,35 +1,42 @@
 .address__wrapper {
-  .conteiner();
-  width: 360px;
+  .container();
   display: flex;
   flex-direction: row;
   align-content: center;
   justify-content: space-between;
-
-  @media (min-width: @tablet-width) {
-    width: 768px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 1200px;
-  }
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .address__text {
   .font (@fz:16px; @lh: 20px;);
   color: @font-color-lightblack;
   text-transform: uppercase;
-  margin-right: 20px;
+  width: 300px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 21px;
+    width: 160px;
+  }
 }
 
 .address__description {
-  .font (@fz:14px; @lh: 20px;);
+  font-family: "Arial";
+  font-size: 14px;
+  line-height: 20px;
   color: @font-color-grey;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    width: 190px;
+    text-align: right;
+  }
 }
 
 .address__map {
   background-image: url("/source/img/rectangle.png");
   width: 320px;
   height: 362px;
-  margin-left: 140px;
 }

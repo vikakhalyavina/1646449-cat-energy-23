@@ -1,8 +1,11 @@
 .catalog__wrapper {
   .container();
-  margin-top: 20px;
+  margin-top: 30px;
+  @media (min-width: @tablet-width) {
+    margin-top: 475px;
+  }
   @media (min-width: @desktop-width) {
-    margin-top: 100px;
+    margin-top: 140px;
   }
 }
 
@@ -13,35 +16,41 @@
   flex-direction: column;
   align-content: center;
   justify-content: center;
-  padding-left: 20px;
-  padding-right: 20px;
-
+  padding-left: 45px;
+  padding-right: 47px;
+  @media (min-width: @tablet-width) {
+    padding-left: 72px;
+  }
   @media (min-width: @desktop-width) {
     flex-direction: row;
+    justify-content: start;
     padding: 0;
+    padding-left: 112px;
   }
 }
 
 .catalog__item {
+  width: auto;
   background-color: @basic-color-lightgrey;
   margin-bottom: 20px;
-  padding: 40px 20px 20px;
+  padding-top: 28px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
+    width: 325px;
     padding: 60px 332px 50px 50px;
-
-    //&:nth-child(1) {
-    //   padding: 60px 350px 50px 50px;
-    // }
   }
 
   @media (min-width: @desktop-width) {
     padding: 0;
-    width: 570px;
-    padding: 70px 40px 40px;
+    width: 485px;
+    padding: 70px 40px 45px;
     margin: 0;
     &:nth-child(1) {
-      margin-right: 20px;
+      margin-right: 85px;
     }
   }
 
@@ -49,18 +58,49 @@
     content: "";
     display: block;
     position: absolute;
-    background-image: url("/source/img/cat_back.png");
+    background-image: url("../img/cat_back.svg");
     width: 50px;
     height: 53px;
+    top: 19px;
+    @media (min-width: @tablet-width) {
+      width: 200px;
+      height: 211px;
+      background-image: url("../img/cat_back-tablet.svg");
+      top: 81px;
+      left: 441px;
+    }
+    @media (min-width: @desktop-width) {
+      width: 100px;
+      height: 106px;
+      background-image: url("../img/cat_back-desktop.svg");
+      top: 40px;
+      left: 50px;
+    }
   }
 
   &:nth-child(2)::before {
     content: "";
     display: block;
     position: absolute;
-    background-image: url("/source/img/cat_back-2.png");
+    background-image: url("../img/cat_back-2.svg");
     width: 67px;
     height: 50px;
+    top: 19px;
+    left: 12px;
+    @media (min-width: @tablet-width) {
+      width: 268px;
+      height: 200px;
+      background-image: url("../img/cat_back-tablet-2.svg");
+      top: 94px;
+      left: 410px;
+    }
+    @media (min-width: @desktop-width) {
+      width: 134px;
+      height: 100px;
+      background-image: url("../img/cat_back-2-desktop.svg");
+      top: 46px;
+      left: 30px;
+    }
   }
 }
 
@@ -69,10 +109,11 @@
   font-weight: 400;
   color: @font-color-black;
   text-transform: uppercase;
-  position: relative;
+
   text-align: center;
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 26px;
+  margin-left: 15px;
 
   &--weight {
     margin-left: 40px;
@@ -80,6 +121,15 @@
 
   @media (min-width: @tablet-width) {
     .font (@fz:36px; @lh:36px;);
+    margin: 0;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 22px;
+  }
+  @media (min-width: @desktop-width) {
+    margin-top: 6px;
+    margin-left: 172px;
+    margin-bottom: 75px;
   }
 }
 
@@ -96,16 +146,28 @@
 
   @media (min-width: @desktop-width) {
     width: 470px;
+    margin-left: 10px;
+  }
+}
+
+.catalog__description--up {
+  width: 340px;
+  margin-top: 25px;
+  @media (min-width: @desktop-width) {
+    width: 470px;
   }
 }
 
 .catalog__text {
-  padding-bottom: 20px;
-  margin-bottom: 20px;
+  padding-bottom: 4px;
+  margin-bottom: 17px;
   border-bottom: 1px solid @border;
 
   @media (min-width: @tablet-width) {
     border: none;
+  }
+  @media (min-width: @desktop-width) {
+    padding: 0;
   }
 }
 
@@ -116,14 +178,31 @@
   text-transform: uppercase;
   position: relative;
 
-  ::after {
+  &::after {
     content: "";
     display: block;
     position: absolute;
-    background-image: url("/source/img/icon.svg");
+    background-image: url("../img/index-catalog-icon.svg");
     width: 24px;
     height: 12px;
     top: 5px;
-    left: 100px;
+    left: 95px;
+    @media (min-width: @tablet-width) {
+      top: 10px;
+      left: 130px;
+    }
+    @media (min-width: @desktop-width) {
+      left: 133px;
+    }
   }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.catalog__desc {
+  margin-top: 25px;
+  margin-left: 10px;
 }

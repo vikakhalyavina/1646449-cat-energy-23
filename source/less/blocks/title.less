@@ -1,39 +1,26 @@
 .title__wrapper {
   .container();
   text-align: center;
+  position: relative;
 
   @media (min-width: @tablet-width) {
-    min-height: 830px;
     background-color: @font-color-white;
-    background-image: url("/source/img/index-catenergy-tablet.jpg");
-    background-position: center bottom;
-    background-repeat: no-repeat;
   }
 
   @media (min-width: @desktop-width) {
     background-image: none;
     min-height: 200px;
-    &::after {
-      position: absolute;
-      content: "";
-      display: block;
-      width: 552px;
-      height: 499px;
-      background-image: url("/source/img/index-catenergy-pk.png");
-      left: 80%;
-      top: -50px;
-    }
   }
 }
 
 .title__container {
   width: auto;
-  height: 302px;
   background-color: @basic-color-green;
   background-image: url("../img/index-background-2.svg"),
     url("../img/index-background-1.jpg");
-  background-position: center center;
+  background-position: center top;
   background-repeat: no-repeat;
+  background-size: cover;
 
   @media (min-width: @tablet-width) {
     background-color: @font-color-white;
@@ -42,22 +29,25 @@
 
   @media (min-width: @desktop-width) {
     position: absolute;
-    top: 200px;
+    top: 191px;
+    left: 64px;
   }
 }
 
 .title__intro {
   .font (@fz:36px; @lh:36px;);
   color: @font-color-white;
-  padding-top: 27px;
+  margin: 0;
+  padding: 0;
+  padding-top: 24px;
+  padding-bottom: 21px;
 
   @media (min-width: @tablet-width) {
     .font (@fz:60px; @lh:60px;);
     color: @font-color-black;
     text-align: left;
-    padding: 0;
-    margin: 0;
-    margin-left: 120px;
+    margin-left: 126px;
+    margin-top: 7px;
   }
 }
 
@@ -65,16 +55,20 @@
   .font (@fz:14px; @lh:14px;);
   color: @font-color-white;
   text-transform: uppercase;
-  position: relative;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 156px;
 
   @media (min-width: @tablet-width) {
     .font (@fz:20px; @lh:20px;);
     color: @font-color-black;
     text-align: left;
-    padding: 0;
-    margin: 0;
-    margin-left: 120px;
-    margin-top: 45px;
+    margin-left: 129px;
+    margin-top: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 126px;
   }
 }
 
@@ -84,24 +78,28 @@
   text-decoration: none;
   text-transform: uppercase;
   background-color: @basic-color-green;
-  padding: 7px 44px;
+  padding: 7px 65px;
+  @media (min-width: @tablet-width) {
+    .font (@fz:20px; @lh:20px;);
+    padding: 10px 27px;
+  }
 }
 
 .title__button-container {
   text-align: center;
-  margin-top: 150px;
+  margin-top: 141px;
 
   @media (min-width: @tablet-width) {
     text-align: left;
     margin: 0;
     position: absolute;
-    top: 350px;
-    left: 120px;
+    top: 385px;
+    left: 130px;
   }
 
   @media (min-width: @desktop-width) {
-    top: 450px;
-    left: 120px;
+    top: 471px;
+    left: 190px;
   }
 }
 
@@ -109,10 +107,19 @@
   width: 280px;
   height: 270px;
   position: absolute;
-  top: 470px;
-  left: 20px;
+  top: 155px;
+  left: 45px;
 
   @media (min-width: @tablet-width) {
-    display: none;
+    width: 709px;
+    height: 609px;
+    top: 230px;
+    left: 40px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 552px;
+    height: 499px;
+    top: -55px;
+    left: 493px;
   }
 }

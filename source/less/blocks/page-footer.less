@@ -51,17 +51,26 @@
 
 .page-footer__link {
   margin-left: 25px;
+  text-decoration: none;
 }
 
 .page-footer__icon {
   margin-right: 67px;
 }
 
-.page-footer__copyright a {
+.page-footer__copyright svg {
   &:hover {
-    fill: @basic-color-green;
+    stroke: @basic-color-green;
   }
-  &:active {
-    opacity: 30%;
-  }
+}
+
+.page-footer__copyright a:active {
+  opacity: 30%;
+}
+
+.page-footer__text {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  color: #444444;
 }

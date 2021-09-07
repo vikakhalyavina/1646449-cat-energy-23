@@ -70,11 +70,11 @@
             <fieldset class="form__fieldset form__fieldset--name">
               <p class="form__item form__item--name">
                 <label for="name">ИМЯ:*</label>
-                <input id="name" type="text" name="name" value="Барсик" />
+                <input id="name" type="text" name="name" value="Барсик"  />
               </p>
               <p class="form__item form__item--weight">
                 <label for="weight">Вес (кг):*</label>
-                <input id="weight" type="text" name="weight" value="7" />
+                <input id="weight" type="text" name="weight" value="7"  />
               </p>
               <p class="form__item form__item--age">
                 <label for="age">Возраст (лет):</label>
@@ -86,7 +86,7 @@
             <fieldset class="form__fieldset form__fieldset--radio">
               <ul class="form__list form-element">
                 <li class="form-element__item">
-                  <input class="form-element__desc visually-hidden" id="slim" type="radio" name="slim" />
+                  <input class="form-element__desc visually-hidden" id="slim" type="radio" name="slim" checked />
                   <label for="slim">Похудение</label>
                 </li>
                 <li class="form-element__item">
@@ -112,7 +112,11 @@
                     type="email"
                     name="email"
                     value="кuklachev@gmail.com"
+
                   />
+                  <svg class="form__item-icon form__item-icon--email" width="19" height="14">
+                <use xlink:href="img/sprite.svg#letter"></use>
+              </svg>
                 </p>
                 <p class="form__item form__item--tel">
                   <label for="tel">Телефон:*</label>
@@ -121,7 +125,11 @@
                     type="tel"
                     name="tel"
                     value="8 (960) 900-60-90"
+
                   />
+                  <svg class="form__item-icon form__item-icon--tel" width="20" height="21">
+                <use xlink:href="img/sprite.svg#tel"></use>
+              </svg>
                 </p>
               </div>
             </fieldset>
@@ -143,7 +151,7 @@
 
               <ul class="form__add add-list">
                 <li class="add-list__item">
-                  <input class="add-list__desc visually-hidden" id="sugar" type="checkbox" name="sugar" />
+                  <input class="add-list__desc visually-hidden" id="sugar" type="checkbox" name="sugar" checked />
                   <label for="sugar">Cахарозаменитель</label>
                 </li>
                 <li class="add-list__item">
@@ -232,14 +240,14 @@
           </ul>
         </div>
         <div class="page-footer__copyright">
-          <a href="https://htmlacademy.ru/"
+          <a href="https://htmlacademy.ru/intensive/adaptive"
             ><img
               src="img/html-academy.svg"
               width="114"
               height="18"
               alt="ссылка на сайт htmlacademy"
           /></a>
-          <a href="https://htmlacademy.ru/"
+          <a href="https://htmlacademy.ru/intensive/adaptive"
             ><img
               src="img/html-new.svg"
               width="27"

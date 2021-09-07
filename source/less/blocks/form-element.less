@@ -24,12 +24,26 @@
   border-radius: 50%;
   left: -44px;
   top: -4px;
+  &:hover {
+    border: 1px solid #bababa;
+  }
   @media (min-width: @tablet-width) {
     width: 40px;
     height: 40px;
     left: -61px;
     top: -7px;
   }
+}
+
+.form-element__desc:disabled + label::before {
+  opacity: 0.3;
+}
+.form-element__desc:disabled + label {
+  opacity: 0.3;
+}
+
+.form-element__desc:checked:disabled + label::after {
+  opacity: 0.3;
 }
 
 .form-element__desc:checked + label::after {

@@ -16,6 +16,18 @@
   position: relative;
 }
 
+.add-list__desc:disabled + label::before {
+  opacity: 0.3;
+}
+
+.add-list__desc:disabled + label {
+  opacity: 0.3;
+}
+
+.add-list__desc:checked:disabled + label::after {
+  opacity: 0.3;
+}
+
 .add-list__desc + label::before {
   content: "";
   position: absolute;
@@ -42,6 +54,7 @@
   background-repeat: no-repeat;
   left: -38px;
   top: 7px;
+
   @media (min-width: @tablet-width) {
     width: 24px;
     height: 19px;

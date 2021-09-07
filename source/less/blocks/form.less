@@ -213,42 +213,50 @@
       margin-bottom: 0;
     }
   }
+}
 
-  &--email::after {
-    content: "";
-    display: block;
-    position: absolute;
-    background-image: url("../img/icon-form-1.svg");
-    width: 18px;
-    height: 13px;
-    top: 15px;
-    left: 232px;
-    @media (min-width: @tablet-width) {
-      top: 19px;
-      left: 617px;
-    }
-    @media (min-width: @desktop-width) {
-      left: 553px;
-    }
+.form__item-icon--email {
+  display: block;
+  position: absolute;
+  width: 18px;
+  height: 13px;
+  top: 15px;
+  left: 232px;
+  &:focus {
+    stroke: #68b738;
   }
+  &:invalid {
+    stroke: #ff8282;
+  }
+  @media (min-width: @tablet-width) {
+    top: 19px;
+    left: 617px;
+  }
+  @media (min-width: @desktop-width) {
+    left: 553px;
+  }
+}
 
-  &--tel::after {
-    content: "";
-    display: block;
-    position: absolute;
-    background-image: url("../img/icon-form-2.svg");
-    width: 20px;
-    height: 20px;
-    top: 67px;
-    left: 234px;
-    @media (min-width: @tablet-width) {
-      top: 88px;
-      left: 617px;
-    }
-    @media (min-width: @desktop-width) {
-      left: 1203px;
-      top: 14px;
-    }
+.form__item-icon--tel {
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 67px;
+  left: 234px;
+  &:focus {
+    fill: #68b738;
+  }
+  &:invalid {
+    fill: #ff8282;
+  }
+  @media (min-width: @tablet-width) {
+    top: 88px;
+    left: 617px;
+  }
+  @media (min-width: @desktop-width) {
+    left: 1203px;
+    top: 14px;
   }
 }
 
@@ -274,6 +282,16 @@
   border: 1px solid #e7e7e7;
   padding: 11px 11px;
   width: 100%;
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+  &:focus {
+    outline: 2px solid #444444;
+  }
+  &:invalid {
+    outline: 2px solid #ff8282;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
@@ -468,6 +486,13 @@
   margin-left: 20px;
   margin-right: 20px;
   margin-top: 11px;
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 22px;

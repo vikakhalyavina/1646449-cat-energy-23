@@ -7,17 +7,23 @@
 
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body class="page__body">
+ <body class="page__body">
     <header class="page-header">
       <div class="page-header__container">
         <div class="page-header__wrapper">
           <a class="page-header__logo">
-            <img
-              src="img/logo-mobile.svg"
-              width="33"
-              height="38"
-              alt="cat energy"
-            />
+            <picture>
+              <source
+                media="(min-width: 1200px)"
+                srcset="img/logo-desktop.svg"
+              />
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" />
+              <img
+                class="page-header__logo"
+                src="img/logo-mobile.svg"
+                alt="cat energy"
+              />
+            </picture>
           </a>
           <a
             ><img
@@ -28,20 +34,20 @@
               alt="логотип"
           /></a>
         </div>
-        <nav class="main-nav main-nav--opened main-nav--nojs">
+        <nav class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <div class="main-nav__wrapper">
-            <ul class="main-nav__list">
-              <li class="main-nav__item main-nav__item--active">
-                <a> Главная </a>
+            <ul class="main-nav__list main-nav__list--catalog">
+              <li class="main-nav__item">
+                <a href="index.html"> Главная </a>
               </li>
               <li class="main-nav__item">
                 <a href="catalog.html"> Каталог продукции </a>
               </li>
-              <li class="main-nav__item">
-                <a href="form.html"> Подбор программы </a>
+              <li class="main-nav__item main-nav__item--active">
+                <a> Подбор программы </a>
               </li>
             </ul>
           </div>
@@ -80,16 +86,16 @@
             <fieldset class="form__fieldset form__fieldset--radio">
               <ul class="form__list form-element">
                 <li class="form-element__item">
-                  <input id="slim" type="radio" name="slim" />
+                  <input class="form-element__desc visually-hidden" id="slim" type="radio" name="slim" />
                   <label for="slim">Похудение</label>
                 </li>
                 <li class="form-element__item">
-                  <input id="pro" type="radio" name="pro" />
-                  <label for="pro">Набор массы</label>
+                  <input class="form-element__desc visually-hidden" id="pro" type="radio" name="pro" />
+                  <label  for="pro">Набор массы</label>
                 </li>
                 <li class="form-element__item">
-                  <input id="advice" type="radio" name="advice" />
-                  <label for="advice">Не знаю (Нужен ваш совет)</label>
+                  <input class="form-element__desc visually-hidden" id="advice" type="radio" name="advice" />
+                  <label  for="advice">Не знаю (Нужен ваш совет)</label>
                 </li>
               </ul>
               </div>
@@ -97,7 +103,7 @@
           </div>
           <div class="form__container form__container--contacts">
             <fieldset class="form__fieldset form__fieldset--contacts">
-              <h3 class="form__heading">Контактные данные (владельца кота)</h3>
+              <h3 class="form__heading form__heading--contacts">Контактные данные (владельца кота)</h3>
               <div class="form__container form__container--contacts">
                 <p class="form__item form__item--email">
                   <label for="email">E-mail:*</label>
@@ -133,23 +139,23 @@
           </div>
           <div class="form__container form__container--checkbox">
             <fieldset class="form__fieldset form__fieldset--checkbox">
-              <h3 class="form__heading">Дополнительно</h3>
+              <h3 class="form__heading form__heading--dop">Дополнительно</h3>
 
               <ul class="form__add add-list">
                 <li class="add-list__item">
-                  <input id="sugar" type="checkbox" name="sugar" />
+                  <input class="add-list__desc visually-hidden" id="sugar" type="checkbox" name="sugar" />
                   <label for="sugar">Cахарозаменитель</label>
                 </li>
                 <li class="add-list__item">
-                  <input id="milk" type="checkbox" name="milk" />
-                  <label for="milk">Молоко</label>
+                  <input class="add-list__desc visually-hidden" id="milk" type="checkbox" name="milk" />
+                  <label for="milk">Питьевая вода</label>
                 </li>
                 <li class="add-list__item">
-                  <input id="water" type="checkbox" name="water" />
-                  <label for="water">Питьевая вода</label>
+                  <input class="add-list__desc visually-hidden" id="water" type="checkbox" name="water" />
+                  <label for="water">Молоко</label>
                 </li>
                 <li class="add-list__item">
-                  <input id="vita" type="checkbox" name="vita" />
+                  <input class="add-list__desc visually-hidden" id="vita" type="checkbox" name="vita" />
                   <label for="vita">Витамины</label>
                 </li>
               </ul>
@@ -161,16 +167,38 @@
           </div>
         </form>
       </section>
+        <section class="address">
+        <div class="address__wrapper address__wrapper--background">
+          <p class="address__text address__text--catalog">
+            Приглашаем <br />
+            к сотрудничеству дилеров!
+          </p>
+          <p class="address__description">
+            ул. Большая Конюшенная, д. 19/8
+            <span class="address__span"> Санкт-Петербург </span>
+          </p>
+        </div>
+        <iframe
+          class="address__map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787253323!2d30.320858715841602!3d59.93871648187622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1630353466990!5m2!1sru!2sru"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </section>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
-          <img
-            src="img/footer-logo.svg"
-            width="101"
-            height="18"
-            alt="логотип"
-          />
+          <a href="index.html">
+            <img
+              class="page-footer__img"
+              src="img/footer-logo.svg"
+              width="101"
+              height="18"
+              alt="логотип"
+            />
+          </a>
         </div>
         <div class="page-footer__social social">
           <ul class="social__list">
@@ -213,7 +241,7 @@
           /></a>
           <a href="https://htmlacademy.ru/"
             ><img
-              src="img/htmlacademy.svg"
+              src="img/html-new.svg"
               width="27"
               height="34"
               alt="лого htmlacademy"
@@ -239,3 +267,4 @@
     </script>
   </body>
 </html>
+

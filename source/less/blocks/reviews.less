@@ -192,6 +192,7 @@
   text-transform: uppercase;
   background-color: @basic-color-darkgrey;
   border: none;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -216,6 +217,7 @@
     background-color: @basic-color-darkgrey;
   }
   @media (min-width: @desktop-width) {
+    padding-top: 0;
     margin-left: 753px;
     margin-top: -7px;
   }
@@ -294,6 +296,15 @@
     border-radius: 50%;
     background: @font-color-white;
     border: 1px solid #cdcdcd;
+    box-shadow: 0px 1px 3px 0px #00000029;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 0px 2px 4px 0px #00000030;
+    }
+    &:active {
+      box-shadow: 0px 3px 5px 0px #00000033;
+      border: 1px solid #68b738;
+    }
   }
 }
 

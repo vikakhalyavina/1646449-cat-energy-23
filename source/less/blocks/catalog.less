@@ -170,13 +170,20 @@
     padding: 0;
   }
 }
-
+.catalog__link:hover::after {
+  width: 32px;
+  background-image: url("../img/index-catalog-icon-hover.svg");
+}
 .catalog__link {
   .font (@fz:16px; @lh:16px;);
   color: @font-color-black;
   text-decoration: none;
   text-transform: uppercase;
   position: relative;
+
+  &:active {
+    opacity: 30%;
+  }
 
   &::after {
     content: "";
@@ -187,6 +194,7 @@
     height: 12px;
     top: 5px;
     left: 95px;
+
     @media (min-width: @tablet-width) {
       top: 10px;
       left: 130px;

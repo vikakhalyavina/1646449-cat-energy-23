@@ -1,4 +1,4 @@
-.page-header {
+.page-header__background {
   background-color: @font-color-white;
 
   @media (min-width: @desktop-width) {
@@ -22,9 +22,10 @@
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  padding: 6px 36px;
+  padding: 10px 20px 15px;
   display: flex;
   align-items: center;
+  border-bottom: 1px solid #d9d9d9;
 
   @media (min-width: @tablet-width) {
     width: 174px;
@@ -32,18 +33,19 @@
     margin: 0;
     padding-top: 24px;
     padding-left: 30px;
+    border: none;
   }
   @media (min-width: @desktop-width) {
     width: 202px;
     height: 59px;
-    padding-left: 100px;
+    padding-left: 110px;
   }
 }
 
 .page-header__logo {
   width: 33px;
   height: 38px;
-  margin-left: 10px;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     width: 174px;
@@ -66,7 +68,9 @@
 .page-header__img {
   width: 101px;
   height: 18px;
-  margin-left: 50px;
+  margin-left: 48px;
+  margin-top: 6px;
+  cursor: pointer;
 
   &:hover {
     opacity: 80%;
@@ -82,7 +86,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .page-header::before {
+  .page-header__background::before {
     content: "";
     display: block;
     position: absolute;
@@ -96,5 +100,9 @@
     background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-index-desktop-2@2x.svg"),
+        url("../img/bg-index-desktop@2x.jpg");
+    }
   }
 }

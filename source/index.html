@@ -11,6 +11,7 @@
   </head>
   <body class="page__body">
     <header class="page-header">
+      <div class="page-header__background">
       <div class="page-header__container">
         <div class="page-header__wrapper">
           <a class="page-header__link">
@@ -39,18 +40,19 @@
           </button>
           <div class="main-nav__wrapper">
             <ul class="main-nav__list">
-              <li class="main-nav__item main-nav__item--active">
-                <a> Главная </a>
+              <li class="main-nav__item main-nav__item--underline main-nav__item--active">
+                <a class="main-nav__link"> Главная </a>
               </li>
               <li class="main-nav__item">
-                <a href="catalog.html"> Каталог продукции </a>
+                <a class="main-nav__link" href="catalog.html"> Каталог продукции </a>
               </li>
               <li class="main-nav__item">
-                <a href="form.html"> Подбор программы </a>
+                <a class="main-nav__link" href="form.html"> Подбор программы </a>
               </li>
             </ul>
           </div>
         </nav>
+      </div>
       </div>
     </header>
     <main class="page-main">
@@ -65,13 +67,13 @@
             </p>
             <p class="title__slogan">Занялся собой? Займись котом!</p>
             <picture>
-               <source media="(min-width: 1200px)"  srcset="img/index-can-desktop@1x.png, img/index-can-desktop@2x.png 2x">
+               <source media="(min-width: 1200px)"  srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x">
               <source media="(min-width: 768px)"
-              srcset="img/index-can-tablet@1x.png, img/index-can-tablet@2x.png 2x">
+              srcset="img/index-can-tablet@1x.png 1x, img/index-can-tablet@2x.png 2x">
             <img
               class="title__img"
               src="img/index-can-mobile@1x.png"
-              srcset="img/index-can-mobile@2x.png 2x"
+              srcset="img/index-can-mobile@1x.png 1x, img/index-can-mobile@2x.png 2x"
               alt="изображение продукции"
             />
          </picture>
@@ -174,13 +176,13 @@
           <p class="reviews__desc">Затраты на питание: <span class="reviews__number">15 000 РУБ.</span></p>
           </div>
           <picture>
-               <source media="(min-width: 1200px)"  srcset="img/two-cat-desktop@1x.png, img/two-cat-desktop@2x.png 2x">
+               <source media="(min-width: 1200px)"  srcset="img/two-cat-desktop@1x.png 1x, img/two-cat-desktop@2x.png 2x">
               <source media="(min-width: 768px)"
-              srcset="img/two-cat-tablet@1x.png, img/two-cat-tablet@2x.png 2x">
+              srcset="img/two-cat-tablet@1x.png 1x, img/two-cat-tablet@2x.png 2x">
           <img
             class="reviews__img"
             src="img/cat-fat-mobile@1x.png"
-srcset="img/cat-fat-mobile@2x.png 2x"
+srcset="img/cat-fat-mobile@1x.png 1x, img/cat-fat-mobile@2x.png 2x"
             alt="изображение кота"
           />
           </picture>
@@ -208,6 +210,7 @@ srcset="img/cat-fat-mobile@2x.png 2x"
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
+          <a href="index.html">
           <img
             class="page-footer__img"
             src="img/footer-logo.svg"
@@ -215,6 +218,7 @@ srcset="img/cat-fat-mobile@2x.png 2x"
             height="18"
             alt="логотип"
           />
+          </a>
         </div>
         <div class="page-footer__social social">
           <ul class="social__list">

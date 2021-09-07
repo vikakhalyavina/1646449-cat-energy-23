@@ -2,7 +2,7 @@
   .font (@fz:16px; @lh:18px;);
   color: @font-color-morelightblack;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 23px;
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
@@ -10,5 +10,44 @@
 }
 
 .form-element__item label {
-  margin-left: 10px;
+  margin-left: 42px;
+  position: relative;
+}
+
+.form-element__desc + label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #d9d9d9;
+  border-radius: 50%;
+  left: -44px;
+  top: -4px;
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+    left: -61px;
+    top: -7px;
+  }
+}
+
+.form-element__desc:checked + label::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: #68b738;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  border-radius: 50%;
+  left: -34px;
+  top: 6px;
+  @media (min-width: @tablet-width) {
+    width: 18px;
+    height: 18px;
+    left: -49px;
+    top: 5px;
+  }
 }

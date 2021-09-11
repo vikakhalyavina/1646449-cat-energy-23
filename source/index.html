@@ -18,9 +18,11 @@
             <picture>
               <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
               <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <svg  class="page-header__logo" width="34" height="38">
-                <use xlink:href="img/logo.svg#main-logo"></use>
-              </svg>
+             <img
+                class="page-header__logo"
+                src="img/logo-mobile.svg"
+                alt="cat energy"
+              />
             </picture>
           </a>
           <a class="page-header__link"
@@ -254,21 +256,6 @@ srcset="img/cat-fat-mobile@1x.png 1x, img/cat-fat-mobile@2x.png 2x"
         </div>
       </div>
     </footer>
-    <script>
-      var navMain = document.querySelector(".main-nav");
-      var navToggle = document.querySelector(".main-nav__toggle");
-
-      navMain.classList.remove("main-nav--nojs");
-
-      navToggle.addEventListener("click", function () {
-        if (navMain.classList.contains("main-nav--closed")) {
-          navMain.classList.remove("main-nav--closed");
-          navMain.classList.add("main-nav--opened");
-        } else {
-          navMain.classList.add("main-nav--closed");
-          navMain.classList.remove("main-nav--opened");
-        }
-      });
-    </script>
+   <script src = "js/script.js"></script>
   </body>
 </html>
